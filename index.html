@@ -5,16 +5,17 @@
   <meta charset="UTF-8">
   <style>
     :root{
-      --primary:#1a73e8;
-      --bg:#f4f6fb;
-      --card-bg:#ffffff;
-      --text:#333333;
-      --muted:#666666;
+      --primary:#2563eb;         /* blue */
+      --accent:#14b8a6;          /* teal */
+      --bg:#0f172a;              /* dark background */
+      --card-bg:#020617;         /* darker card */
+      --text:#e5e7eb;            /* light text */
+      --muted:#9ca3af;           /* muted text */
     }
     *{box-sizing:border-box;margin:0;padding:0;}
     body{
-      font-family:Arial,Helvetica,sans-serif;
-      background:var(--bg);
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:radial-gradient(circle at top, #1e293b 0, #020617 55%);
       color:var(--text);
       line-height:1.6;
     }
@@ -24,30 +25,32 @@
       padding:0 16px 40px;
     }
     header{
-      background:var(--card-bg);
-      padding:24px 20px;
-      border-radius:10px;
-      box-shadow:0 2px 8px rgba(0,0,0,0.06);
+      background:linear-gradient(135deg,#0f172a,#020617);
+      border-radius:16px;
+      padding:24px 22px;
+      border:1px solid #1f2937;
+      box-shadow:0 20px 40px rgba(0,0,0,0.45);
       display:flex;
       flex-wrap:wrap;
       justify-content:space-between;
-      align-items:flex-start;
       gap:12px;
     }
     header h1{
-      font-size:2.2rem;
-      color:var(--primary);
+      font-size:2.4rem;
+      color:#f9fafb;
       margin-bottom:4px;
     }
     header p.role{
-      font-weight:bold;
+      font-weight:600;
+      color:var(--accent);
     }
     .meta{
       font-size:0.9rem;
       color:var(--muted);
+      text-align:right;
     }
     .meta a{
-      color:var(--primary);
+      color:#93c5fd;
       text-decoration:none;
     }
     .meta a:hover{text-decoration:underline;}
@@ -55,36 +58,38 @@
     h2{
       margin:28px 0 10px;
       font-size:1.4rem;
-      color:var(--primary);
-      border-bottom:2px solid rgba(26,115,232,0.2);
-      padding-bottom:4px;
+      color:#bfdbfe;
+      letter-spacing:0.03em;
     }
 
     .section{
       margin-top:10px;
       background:var(--card-bg);
       padding:18px 16px;
-      border-radius:10px;
-      box-shadow:0 2px 8px rgba(0,0,0,0.04);
+      border-radius:14px;
+      border:1px solid #1f2937;
+      box-shadow:0 10px 25px rgba(0,0,0,0.35);
     }
 
     .projects .project{
       margin-bottom:16px;
-      padding:12px 10px;
-      border-left:4px solid var(--primary);
-      background:#fdfdff;
+      padding:14px 12px;
+      border-left:4px solid var(--accent);
+      background:#020617;
+      border-radius:10px;
     }
     .projects .project-title{
-      font-weight:bold;
+      font-weight:600;
       margin-bottom:4px;
+      color:#e5e7eb;
     }
     .projects a{
       font-size:0.95rem;
-      color:var(--primary);
+      color:#60a5fa;
       text-decoration:none;
       word-break:break-all;
     }
-    .projects a:hover{text-decoration:underline;}
+    .projects a:hover{color:#93c5fd;text-decoration:underline;}
     .tech{
       font-size:0.9rem;
       color:var(--muted);
@@ -94,34 +99,44 @@
       list-style:none;
       display:flex;
       flex-wrap:wrap;
-      gap:6px 12px;
-      font-size:0.95rem;
+      gap:6px 10px;
+      font-size:0.9rem;
+      margin-top:6px;
     }
     .badge{
-      background:#e8f0fe;
-      color:#174ea6;
+      background:rgba(37,99,235,0.15);
+      color:#e5e7eb;
       border-radius:999px;
       padding:4px 10px;
+      border:1px solid rgba(148,163,184,0.6);
     }
 
     .btn{
       display:inline-block;
       margin-top:6px;
-      padding:8px 14px;
-      background:var(--primary);
+      padding:9px 16px;
+      background:linear-gradient(135deg,#2563eb,#14b8a6);
       color:#ffffff;
-      border-radius:6px;
+      border-radius:999px;
       text-decoration:none;
-      font-weight:bold;
+      font-weight:600;
       font-size:0.95rem;
+      border:none;
+      box-shadow:0 10px 25px rgba(15,118,110,0.55);
     }
     .btn:hover{
-      background:#0d47a1;
+      filter:brightness(1.1);
     }
+
+    .about-text{color:var(--muted);font-size:0.98rem;}
+
+    ul{padding-left:18px;}
+    li{margin-bottom:4px;}
 
     @media(max-width:600px){
       header{flex-direction:column;}
-      header h1{font-size:1.8rem;}
+      header h1{font-size:2rem;}
+      .meta{text-align:left;}
     }
   </style>
 </head>
@@ -132,8 +147,8 @@
     <header>
       <div>
         <h1>Petta Laxmi Shireesha</h1>
-        <p class="role">B.Tech IT | Full‑Stack Developer (Flutter · Django · Flask)</p>
-        <p class="meta">CGPA: 8.45 · JNTUGV, Vizianagaram</p>
+        <p class="role">B.Tech IT · Full‑Stack Developer (Flutter · Django · Flask)</p>
+        <p class="meta" style="text-align:left;">CGPA: 8.45 · JNTUGV, Vizianagaram</p>
       </div>
       <div class="meta">
         <div>📧 <a href="mailto:shireeshapetta@gmail.com">shireeshapetta@gmail.com</a></div>
@@ -146,16 +161,16 @@
     <!-- ABOUT -->
     <h2>About</h2>
     <div class="section">
-      <p>
-        IT graduate-level student with hands-on experience in building full‑stack applications using
-        Flutter, Django, Flask, and Java/JSP. Strong focus on clean architecture, API integration,
-        database design, and debugging. Actively seeking software developer / internship roles to
-        apply problem‑solving skills to real‑world products.
+      <p class="about-text">
+        IT student with hands-on experience building full‑stack applications using Flutter, Django,
+        Flask, and Java/JSP. Enjoys designing clean architectures, integrating REST APIs, and working
+        with MySQL databases. Interested in software developer and internship roles where real-world
+        problems, debugging, and performance optimisation are important.
       </p>
     </div>
 
     <!-- PROJECTS -->
-    <h2>Projects</h2>
+    <h2>Featured Projects</h2>
     <div class="section projects">
 
       <div class="project">
@@ -163,7 +178,7 @@
         <a href="https://github.com/Shireeshapetta/flutter-music">
           github.com/Shireeshapetta/flutter-music
         </a>
-        <p>Built a Flutter mobile app that streams audio using the YouTube API with responsive UI and robust error handling.</p>
+        <p>Flutter mobile app that streams audio via the YouTube API, with responsive UI and emulator‑tested UX.</p>
         <p class="tech">Tech: Flutter, Dart, YouTube API, Android Studio</p>
       </div>
 
@@ -172,7 +187,7 @@
         <a href="https://github.com/Shireeshapetta/TourismPortal">
           github.com/Shireeshapetta/TourismPortal
         </a>
-        <p>Developed a tourism web portal backend with Flask and MySQL for managing destinations, bookings, and user access via REST APIs.</p>
+        <p>Tourism web portal backend with Flask and MySQL for destinations, bookings and user access through REST APIs.</p>
         <p class="tech">Tech: Python, Flask, MySQL, HTML, CSS, JavaScript</p>
       </div>
 
@@ -181,7 +196,7 @@
         <a href="https://github.com/Shireeshapetta/django-project-siri">
           github.com/Shireeshapetta/django-project-siri
         </a>
-        <p>Created a Django platform where students can form project groups, share files, chat, and track tasks in one place.</p>
+        <p>Django platform for forming project groups, sharing files, chat and simple task tracking for students.</p>
         <p class="tech">Tech: Django, Python, JavaScript, MySQL</p>
       </div>
 
@@ -190,7 +205,7 @@
     <!-- SKILLS -->
     <h2>Skills</h2>
     <div class="section">
-      <strong>Technical:</strong>
+      <strong>Technical</strong>
       <ul class="list-inline">
         <li class="badge">Flutter & Dart</li>
         <li class="badge">Python (Flask, Django)</li>
@@ -198,10 +213,10 @@
         <li class="badge">HTML, CSS, JavaScript</li>
         <li class="badge">MySQL, Firebase (basic)</li>
         <li class="badge">Git, GitHub, VS Code, Android Studio</li>
-        
+        <li class="badge">REST APIs, JSON</li>
       </ul>
       <br>
-      <strong>Soft:</strong>
+      <strong>Soft</strong>
       <ul class="list-inline">
         <li class="badge">Problem-solving</li>
         <li class="badge">Debugging</li>
@@ -224,7 +239,7 @@
     <!-- RESUME -->
     <h2>Resume</h2>
     <div class="section">
-      <p>You can download my latest resume here:</p>
+      <p class="about-text">Download my latest resume for full details of education, projects, and experience.</p>
       <a class="btn" href="siri-resume.pdf" download>⬇️ Download Resume (PDF)</a>
     </div>
 
