@@ -1,53 +1,233 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Petta Laxmi Shireesha - Portfolio</title>
-<style>
-body{font-family:Arial,sans-serif;max-width:800px;margin:50px auto;padding:20px;background:#f8f9fa;}
-h1{font-size:2.5em;color:#1a73e8;}
-h2{color:#333;margin-top:30px;}
-a{text-decoration:none;color:#1a73e8;font-weight:bold;}
-a:hover{color:#0d47a1;}
-.project{margin:20px 0;padding:15px;border-left:4px solid #1a73e8;background:white;}
-</style>
+  <title>Petta Laxmi Shireesha - Portfolio</title>
+  <meta charset="UTF-8">
+  <style>
+    :root{
+      --primary:#1a73e8;
+      --bg:#f4f6fb;
+      --card-bg:#ffffff;
+      --text:#333333;
+      --muted:#666666;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{
+      font-family:Arial,Helvetica,sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    .container{
+      max-width:960px;
+      margin:40px auto;
+      padding:0 16px 40px;
+    }
+    header{
+      background:var(--card-bg);
+      padding:24px 20px;
+      border-radius:10px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.06);
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:12px;
+    }
+    header h1{
+      font-size:2.2rem;
+      color:var(--primary);
+      margin-bottom:4px;
+    }
+    header p.role{
+      font-weight:bold;
+    }
+    .meta{
+      font-size:0.9rem;
+      color:var(--muted);
+    }
+    .meta a{
+      color:var(--primary);
+      text-decoration:none;
+    }
+    .meta a:hover{text-decoration:underline;}
+
+    h2{
+      margin:28px 0 10px;
+      font-size:1.4rem;
+      color:var(--primary);
+      border-bottom:2px solid rgba(26,115,232,0.2);
+      padding-bottom:4px;
+    }
+
+    .section{
+      margin-top:10px;
+      background:var(--card-bg);
+      padding:18px 16px;
+      border-radius:10px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .projects .project{
+      margin-bottom:16px;
+      padding:12px 10px;
+      border-left:4px solid var(--primary);
+      background:#fdfdff;
+    }
+    .projects .project-title{
+      font-weight:bold;
+      margin-bottom:4px;
+    }
+    .projects a{
+      font-size:0.95rem;
+      color:var(--primary);
+      text-decoration:none;
+      word-break:break-all;
+    }
+    .projects a:hover{text-decoration:underline;}
+    .tech{
+      font-size:0.9rem;
+      color:var(--muted);
+    }
+
+    .list-inline{
+      list-style:none;
+      display:flex;
+      flex-wrap:wrap;
+      gap:6px 12px;
+      font-size:0.95rem;
+    }
+    .badge{
+      background:#e8f0fe;
+      color:#174ea6;
+      border-radius:999px;
+      padding:4px 10px;
+    }
+
+    .btn{
+      display:inline-block;
+      margin-top:6px;
+      padding:8px 14px;
+      background:var(--primary);
+      color:#ffffff;
+      border-radius:6px;
+      text-decoration:none;
+      font-weight:bold;
+      font-size:0.95rem;
+    }
+    .btn:hover{
+      background:#0d47a1;
+    }
+
+    @media(max-width:600px){
+      header{flex-direction:column;}
+      header h1{font-size:1.8rem;}
+    }
+  </style>
 </head>
 <body>
-<h1>👋 Petta Laxmi Shireesha</h1>
-<p><strong>B.Tech IT | JNTUGV | CGPA: 8.45</strong><br>
-Full-Stack Developer | Flutter | Django | Flask</p>
+  <div class="container">
 
-<h2>📱 Featured Projects</h2>
+    <!-- HEADER -->
+    <header>
+      <div>
+        <h1>Petta Laxmi Shireesha</h1>
+        <p class="role">B.Tech IT | Full‑Stack Developer (Flutter · Django · Flask)</p>
+        <p class="meta">CGPA: 8.45 · JNTUGV, Vizianagaram</p>
+      </div>
+      <div class="meta">
+        <div>📧 <a href="mailto:shireeshapetta@gmail.com">shireeshapetta@gmail.com</a></div>
+        <div>📞 +91 74165 95437</div>
+        <div>🔗 <a href="https://linkedin.com/in/shireesha-p-6462ba2a9">LinkedIn</a> ·
+             <a href="https://github.com/Shireeshapetta">GitHub</a></div>
+      </div>
+    </header>
 
-<div class="project">
-<strong>🎵 Flutter Music Streaming App</strong><br>
-<a href="https://github.com/Shireeshapetta/flutter-music">github.com/Shireeshapetta/flutter-music</a><br>
-YouTube API real-time streaming | Emulator-tested UI/UX
-</div>
+    <!-- ABOUT -->
+    <h2>About</h2>
+    <div class="section">
+      <p>
+        IT graduate-level student with hands-on experience in building full‑stack applications using
+        Flutter, Django, Flask, and Java/JSP. Strong focus on clean architecture, API integration,
+        database design, and debugging. Actively seeking software developer / internship roles to
+        apply problem‑solving skills to real‑world products.
+      </p>
+    </div>
 
-<div class="project">
-<strong>✈️ Python Flask Tourism Portal</strong><br>
-<a href="https://github.com/Shireeshapetta/TourismPortal">github.com/Shireeshapetta/TourismPortal</a><br>
-MySQL database | REST APIs | Multi-user access
-</div>
+    <!-- PROJECTS -->
+    <h2>Projects</h2>
+    <div class="section projects">
 
-<div class="project">
-<strong>👥 Student Collaboration Platform</strong><br>
-<a href="https://github.com/Shireeshapetta/django-project-siri">github.com/Shireeshapetta/django-project-siri</a><br>
-Django | Real-time chat | File sharing | Task management
-</div>
+      <div class="project">
+        <div class="project-title">🎵 Flutter Music Streaming App</div>
+        <a href="https://github.com/Shireeshapetta/flutter-music">
+          github.com/Shireeshapetta/flutter-music
+        </a>
+        <p>Built a Flutter mobile app that streams audio using the YouTube API with responsive UI and robust error handling.</p>
+        <p class="tech">Tech: Flutter, Dart, YouTube API, Android Studio</p>
+      </div>
 
+      <div class="project">
+        <div class="project-title">✈️ Python Flask Tourism Portal</div>
+        <a href="https://github.com/Shireeshapetta/TourismPortal">
+          github.com/Shireeshapetta/TourismPortal
+        </a>
+        <p>Developed a tourism web portal backend with Flask and MySQL for managing destinations, bookings, and user access via REST APIs.</p>
+        <p class="tech">Tech: Python, Flask, MySQL, HTML, CSS, JavaScript</p>
+      </div>
 
-<h2>📄 Resume</h2>
-<a href="siri-resume.pdf" download style="font-size:1.2em;">⬇️ Download Resume (PDF)</a>
+      <div class="project">
+        <div class="project-title">👥 Student Collaboration Platform</div>
+        <a href="https://github.com/Shireeshapetta/django-project-siri">
+          github.com/Shireeshapetta/django-project-siri
+        </a>
+        <p>Created a Django platform where students can form project groups, share files, chat, and track tasks in one place.</p>
+        <p class="tech">Tech: Django, Python, JavaScript, MySQL</p>
+      </div>
 
+    </div>
 
+    <!-- SKILLS -->
+    <h2>Skills</h2>
+    <div class="section">
+      <strong>Technical:</strong>
+      <ul class="list-inline">
+        <li class="badge">Flutter & Dart</li>
+        <li class="badge">Python (Flask, Django)</li>
+        <li class="badge">Java, JSP/Servlets</li>
+        <li class="badge">HTML, CSS, JavaScript</li>
+        <li class="badge">MySQL, Firebase (basic)</li>
+        <li class="badge">Git, GitHub, VS Code, Android Studio</li>
+        <li class="badge">REST APIs, JSON</li>
+      </ul>
+      <br>
+      <strong>Soft:</strong>
+      <ul class="list-inline">
+        <li class="badge">Problem-solving</li>
+        <li class="badge">Debugging</li>
+        <li class="badge">Teamwork & communication</li>
+        <li class="badge">Time management</li>
+        <li class="badge">Fast learning</li>
+      </ul>
+    </div>
 
+    <!-- CERTIFICATIONS -->
+    <h2>Certifications</h2>
+    <div class="section">
+      <ul>
+        <li><strong>Infosys Springboard:</strong> Salesforce AI, HTML, CSS, JavaScript, Flutter, Design Thinking</li>
+        <li><strong>CS Codenz:</strong> Data Structures, Python</li>
+        <li><strong>Skill India – Tech Mahindra:</strong> Cyber Security</li>
+      </ul>
+    </div>
 
+    <!-- RESUME -->
+    <h2>Resume</h2>
+    <div class="section">
+      <p>You can download my latest resume here:</p>
+      <a class="btn" href="siri-resume.pdf" download>⬇️ Download Resume (PDF)</a>
+    </div>
 
-<h2>📞 Contact</h2>
-<p>shireeshapetta@gmail.com | +91 74165 95437<br>
-<a href="https://linkedin.com/in/shireesha-p-6462ba2a9">LinkedIn</a> | <a href="https://github.com/Shireeshapetta">GitHub</a></p>
-
-
+  </div>
 </body>
 </html>
